@@ -1,0 +1,331 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, hgroup2,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+/*article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}*/
+body {
+	font-family: 'Arimo', sans-serif;
+	font-size: 1em;
+	background: #000;
+	color: #fff; 
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.background-gallery {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.background-gallery li {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: 50% 50%;
+	background-size: cover;
+	opacity: 0; 
+}
+
+.background-gallery li:nth-child(1) {
+	background-image: url(../images/anonyme.png);
+	animation: fade 15s infinite 0s;
+	-webkit-animation: fade 15s infinite 0s;
+}
+
+.background-gallery li:nth-child(2) {
+	background-image: url(../images/woman.png);
+	animation: fade 15s infinite 5s;
+	-webkit-animation: fade 15s infinite 5s;
+}
+
+.background-gallery li:nth-child(3) {
+	background-image: url(../images/man.png);
+	animation: fade 15s infinite 10s;
+	-webkit-animation: fade 15s infinite 10s;
+}
+
+@keyframes fade {
+	0% {opacity: 0;}
+	15% {opacity: 1;}
+	25% {opacity: 1;}
+	35% {opacity: 0;}
+	100% {opacity: 0;}
+}
+@-webkit-keyframes fade {
+	0% {opacity: 0;}
+	15% {opacity: 1;}
+	25% {opacity: 1;}
+	35% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	display: inline;
+	background: black;
+	background: rgba(0,0,0,0.6);
+	z-index: 100;
+}
+
+nav a {
+	display: inline-block;
+    text-decoration: none;
+    color:grey;
+	padding: 0 20px;
+	line-height: 50px;
+}
+
+nav b {
+	display: inline-block;
+    text-decoration: none;
+    color:#FFFFFF;
+	padding: 0 20px;
+	line-height: 50px;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+hgroup {
+	position: relative;
+/*	margin-top: 15.625em;*/
+	margin-top: 10%;
+	text-align: center;
+	font-weight: normal;
+	text-shadow: 0.2px 5px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+hgroup a {
+    text-decoration: none;
+    color:#FFFFFF;
+	padding: 0 20px;
+	line-height: 50px;
+}
+
+h1 {
+	font-family: 'Arimo', sans-serif;
+	font-size: 6em; /* 6x 16px = 128px */
+}
+
+h2 {
+	font-family: 'Arimo', sans-serif;
+	font-size: 2.25em; /* 2.25x 16px = 128px */
+}
+
+h3 {
+	font-family: 'Arimo', sans-serif;
+	font-size: 1.5em; /* 1.5x 16px = 128px */
+}
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	background: black;
+	background: rgba(0, 0, 0, 0.6);
+	line-height: 50px;
+	text-align: center;
+	font-size: 0.875em;
+	z-index: 100;
+}
+
+footer a {
+	font-family: 'Arimo', sans-serif;
+	color: #FFFFFF;
+}
+
+/* Gestion de la galerie photo */
+
+#images-box {
+    /* La largeur totale du bloc conteneur, essentiellement pour le centrage */
+    width: 850px;
+    margin: 0px auto;
+    position: relative;
+    top: 70px;
+    bottom: 70px;
+}
+ 
+.image-lightbox img {
+    /* Chaque image hérite ses dimensions de son parent */
+    width: inherit;
+    height: inherit;
+}
+ 
+.holder {
+    /* Dimension des images, vous pouvez les modifier */
+    width: 250px;
+    height: 166px;
+    /* Flottement à gauche, donc l'ensemble est aligné à droite */
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+.holder-portfolio {
+    /* Dimension des images, vous pouvez les modifier */
+    width: 240px;
+    height: 400px;
+    /* Flottement à gauche, donc l'ensemble est aligné à droite */
+    float: left;
+    margin: 0 20px 0 0;
+}
+ 
+.image-lightbox {
+    /* Les dimensions héritent de .holder */
+    width: inherit;
+    height: inherit;
+    padding: 5px;
+    /* Ombrage des blocs */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    background: grey;
+    border-radius: 0px;
+    /* Position absolue pour permettre de zoomer ultérieurement */
+    position: absolute;
+    top: 0;
+    font-family: Arial, sans-serif;
+    /* Transitions pour rendre l'ensemble visuellement abouti */
+    -webkit-transition: all ease-in 0.5s;
+    -moz-transition: all ease-in 0.5s;
+    -ms-transition: all ease-in 0.5s;
+    -o-transition: all ease-in 0.5s;
+}
+ 
+.image-lightbox span {
+    display: none;
+}
+ 
+.image-lightbox .expand {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4000;
+    background: rgba(0,0,0,0); /* Fixe un bogue d'IE */
+}
+ 
+.image-lightbox .close {
+    position: absolute;
+    width: 20px; height: 20px;
+    right: 20px; top: 20px;
+}
+ 
+.image-lightbox .close a {
+    height: auto; width: auto;
+    padding: 5px 10px;
+    color: #fff;
+    text-decoration: none;
+    background: #22272c;
+    box-shadow: inset 0px 24px 20px -15px rgba(255, 255, 255, 0.1), 
+        inset 0px 0px 10px rgba(0,0,0,0.4), 
+        0px 0px 30px rgba(255,255,255,0.4);
+    border-radius: 5px;
+    font-weight: bold;
+    float: right;
+}
+ 
+.close a:hover {
+    box-shadow: inset 0px -24px 20px -15px rgba(255, 255, 255, 0.01), 
+        inset 0px 0px 10px rgba(0,0,0,0.4), 
+        0px 0px 20px rgba(255,255,255,0.4);
+}
+
+div[id^=image]:target {
+    width: 480px;
+    height: 800px;
+    z-index: 5000;
+    top: 100px;
+    left: 200px;
+}
+div[id^=image]:target .close {
+    display: block;
+}
+ 
+div[id^=image]:target .expand {
+    display: none;
+}
+
+div[id^=himage]:target {
+    width: 450px;
+    height: 300px;
+    z-index: 5000;
+    top: 50px;
+    left: 200px;
+}
+div[id^=himage]:target .close {
+    display: block;
+}
+ 
+div[id^=himage]:target .expand {
+    display: none;
+}
+
+/* Positionnement images projet */
+div#himage-1-1:target, div#himage-2-1:target { left: 200px; }
+
+div#himage-1-1 { left: 100px; }
+div#himage-2-1 { left: 450px; }
+
+/* Positionnement images portfolio */
+div#image-1-2:target, div#image-2-2:target, div#image-3-2:target { left: 200px; }
+div#image-4-2:target, div#image-5-2:target, div#image-6-2:target { left: 200px; }
+div#image-7-2:target, div#image-8-2:target, div#image-9-2:target { left: 200px; }
+div#image-10-2:target { left: 200px; }
+
+div#image-1-2 { left: 0; }
+div#image-2-2 { left: 290px; }
+div#image-3-2 { left: 580px; }
+div#image-4-2 { left: 0; top: 450px}
+div#image-5-2 { left: 290px; top: 450px;}
+div#image-6-2 { left: 580px; top: 450px;}
+div#image-7-2 { left: 0; top: 900px;}
+div#image-8-2 { left: 290px; top: 900px;}
+div#image-9-2 { left: 580px; top: 900px;}
+div#image-10-2 { left: 0px; top: 1350px;}
+
+
+
+/* Fin Gestion de la galerie photo */
