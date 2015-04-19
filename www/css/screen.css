@@ -2,29 +2,36 @@
 
 /* Page */
 html {
-	font-size: 100%; /* Voir -> Note 1 à la fin de la feuille de styles. */
+    background: url(../img/maxresdefault.jpg) no-repeat center top;
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -ms-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;
+    background-attachment:fixed;
+    font-size: 100%; /* Voir -> Note 1 à la fin de la feuille de styles. */
 }
 body {
-	margin: 0;
-	padding: 10px 20px; /* Note -> 2 */
-	font-family: 'Arimo', sans-serif;
-	font-size: .8em; /* -> 4 */
-	line-height: 1.25; /* -> 5 */
-	color: black;
-	background: white;
+    margin: 0;
+    padding: 10px 20px; /* Note -> 2 */
+    font-family: 'Arimo', sans-serif;
+    font-size: .8em; /* -> 4 */
+    line-height: 1.25; /* -> 5 */
+    color: black;
+    background: none;
 }
 
 /* Titres */
 h1, h2, h3, h4, h5, h6 {
-	margin: 1em 0 .5em 0; /* -> 6 */
+    margin: 1em 0 .5em 0; /* -> 6 */
 }
 h1, h2 {
-	font-family: 'Arimo', sans-serif;
-	font-weight: normal; /* -> 7 */
+    font-family: 'Arimo', sans-serif;
+    font-weight: normal; /* -> 7 */
 }
 h1 {
-	font-size: 3em; /* -> 8 */
-	font-style: italic;
+    font-size: 3em; /* -> 8 */
+    font-style: italic;
 }
 h2 {font-size: 1.8em;}
 h3 {font-size: 1.2em;}
@@ -33,175 +40,173 @@ h4 {font-size: 1em;}
 
 /* Listes */
 ul, ol {
-	margin: .75em 0 .75em 24px;
-	padding: 0; /* -> 9 */
+    margin: .75em 0 .75em 24px;
+    padding: 0; /* -> 9 */
 }
 ul {
-	list-style: square;
+    list-style: square;
 }
 li {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 /* Paragraphes */
 p {
-	margin: .75em 0;
+    margin: .75em 0;
 }
 li p, blockquote p {
-	margin: .5em 0;
+    margin: .5em 0;
 }
 
 /* Liens */
 a {
-	color: mediumblue;
-	text-decoration: underline;
+    color: mediumblue;
+    text-decoration: underline;
 }
 a:hover, a:focus {
-	color: crimson;
+    color: crimson;
 }
 a img {
-	border: none; /* -> 10 */
+    border: none; /* -> 10 */
 }
 
 /* Divers éléments de type en-ligne */
 em {
-	font-style: italic;
+    font-style: italic;
 }
 strong {
-	font-weight: bold;
-	color: dimgray;
+    font-weight: bold;
+    color: dimgray;
 }
-
 
 /* Bloc central contenant #navigation et #contenu */
 #centre {
-	background: #FFFFFF; /* Voir -> Note 1 */
+    background: none; /* Voir -> Note 1 */
 }
 
 /* Navigation */
 #navigation {
-	background: #FFFFFF;
+    background: none;
 }
 #navigation a {
-	color: #000000;
+    color: #000000;
 }
 #navigation a:hover, #navigation a:focus {
-	background: #F2F2F2;
+    background: #F2F2F2;
 }
 
 /* Contenu principal */
 #contenu {
     min-height: 400px;
-	color: #000000;
-	background: #FFFFFF; /* -> 2 */
+    color: #000000;
+    background: none; /* -> 2 */
 }
 #contenu a {
-	color: #332510;
+    color: #332510;
 }
 #contenu a:hover, #contenu a:focus {
-	color: #6E5122;
+    color: #6E5122;
 }
 #contenu strong {
-	color: #181A12;
+    color: #181A12;
 }
 
 /* --- POSITIONNEMENT --- */
 
 /* Page */
 body {
-	padding: 10px 5px;
+    padding: 10px 5px;
 }
 #global {
-	width: 750px; /* -> 3 */
-	margin: 0 auto; /* -> 4 */
+    width: 750px; /* -> 3 */
+    margin: 0 auto; /* -> 4 */
 }
 
 /* En-tête */
 #entete {
-	padding: 20px 20px 20px 0;
+    padding: 20px 20px 20px 0;
 }
 #entete h1 {
-	margin: 0;
+    margin: 0;
 }
 #entete h1 img {
-	float: left;
-	margin: 7px 20px 10px 0;
+    float: left;
+    margin: 7px 20px 10px 0;
 }
 #entete .sous-titre {
-	margin: 4px 0 15px 0;
+    margin: 4px 0 15px 0;
 }
 
 /* Bloc central contenant #navigation et #contenu */
 #centre {
-	width: 100%; /* -> 5 */
-	overflow: hidden; /* -> 5 */
+    width: 100%; /* -> 5 */
+    overflow: hidden; /* -> 5 */
 }
 
 /* Menu de navigation */
 #navigation {
-	width: 180px;
-	float: left; /* -> 6 */
+    width: 180px;
+    float: left; /* -> 6 */
 }
 #navigation ul {
-	margin: 0;
-	padding: 20px 10px 20px 10px;
-	list-style: none;
+    margin: 0;
+    padding: 20px 10px 20px 10px;
+    list-style: none;
 }
 #navigation a {
-	display: block;
-	height: 1%; /* -> 7 */
-	padding: 6px 10px 6px 10px;
-	line-height: 1.5;
-	font-size: .9em;
-	text-decoration: none;
+    display: block;
+    height: 1%; /* -> 7 */
+    padding: 6px 10px 6px 10px;
+    line-height: 1.5;
+    font-size: .9em;
+    text-decoration: none;
 }
 
 /* Contenu */
 #contenu {
-	margin-left: 200px; /* -> 8 */
-	padding: 10px 20px;
+    margin-left: 200px; /* -> 8 */
+    padding: 10px 20px;
 }
 #contenu > :first-child {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 #contenu p, #contenu li {
-	line-height: 1.5;
+    line-height: 1.5;
 }
 
 /* Pied de page */
 #pied {
-	padding: 15px 20px 10px 0;
-	font-size: .85em;
+    padding: 15px 20px 10px 0;
+    font-size: .85em;
 }
 
 /* Mention de copyright */
 #copyright {
-	margin: 8px 0 0 0;
-	font-size: 1em;
-	text-align: center;
+    margin: 8px 0 0 0;
+    font-size: 1em;
+    text-align: center;
 }
 
 #copyright a {
-	font-family: 'Arimo', sans-serif;
-	color: #000000;
+    font-family: 'Arimo', sans-serif;
+    color: #000000;
 }
 
 
 hgroup {
-	position: relative;
-/*	margin-top: 15.625em;*/
-	margin-top: 10%;
-	text-align: center;
-	font-weight: normal;
-	text-shadow: 0.2px 5px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.8);
+    position: relative;
+    margin-top: 10%;
+    text-align: center;
+    font-weight: normal;
+    text-shadow: 0.2px 5px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.8);
 }
 
 hgroup a {
     text-decoration: none;
     color:#FFFFFF;
-	padding: 0 20px;
-	line-height: 50px;
+    padding: 0 20px;
+    line-height: 50px;
 }
 
 .ico_categorie
@@ -210,174 +215,21 @@ hgroup a {
     margin-right: 8px;
 }
 
-
 footer {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 50px;
-	background: black;
-	background: rgba(0, 0, 0, 0.6);
-	line-height: 50px;
-	text-align: center;
-	font-size: 0.875em;
-	z-index: 100;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background: black;
+    background: rgba(0, 0, 0, 0.6);
+    line-height: 50px;
+    text-align: center;
+    font-size: 0.875em;
+    z-index: 100;
 }
 
 footer a {
-	font-family: 'Arimo', sans-serif;
-	color: #FFFFFF;
+    font-family: 'Arimo', sans-serif;
+    color: #FFFFFF;
 }
-
-/* Gestion de la galerie photo */
-
-#images-box {
-    /* La largeur totale du bloc conteneur, essentiellement pour le centrage */
-    width: 850px;
-    margin: 0px auto;
-    position: relative;
-    top: 70px;
-    bottom: 70px;
-}
- 
-.image-lightbox img {
-    /* Chaque image hérite ses dimensions de son parent */
-    width: inherit;
-    height: inherit;
-}
- 
-.holder {
-    /* Dimension des images, vous pouvez les modifier */
-    width: 250px;
-    height: 166px;
-    /* Flottement à gauche, donc l'ensemble est aligné à droite */
-    float: left;
-    margin: 0 0 0 0;
-}
-
-.holder-portfolio {
-    /* Dimension des images, vous pouvez les modifier */
-    width: 240px;
-    height: 400px;
-    /* Flottement à gauche, donc l'ensemble est aligné à droite */
-    float: left;
-    margin: 0 0 0 0;
-}
- 
-.image-lightbox {
-    /* Les dimensions héritent de .holder */
-    width: inherit;
-    height: inherit;
-    padding: 0px;
-    /* Ombrage des blocs */
-    box-shadow: 0px 0px 0px rgba(0,0,0,0.1);
-    background: grey;
-    border-radius: 0px;
-    /* Position absolue pour permettre de zoomer ultérieurement */
-    position: absolute;
-    top: 0;
-    font-family: Arial, sans-serif;
-    /* Transitions pour rendre l'ensemble visuellement abouti */
-    -webkit-transition: all ease-in 0.5s;
-    -moz-transition: all ease-in 0.5s;
-    -ms-transition: all ease-in 0.5s;
-    -o-transition: all ease-in 0.5s;
-}
- 
-.image-lightbox span {
-    display: none;
-}
- 
-.image-lightbox .expand {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 4000;
-    background: rgba(0,0,0,0); /* Fixe un bogue d'IE */
-}
- 
-.image-lightbox .close {
-    position: absolute;
-    width: 20px; height: 20px;
-    right: 20px; top: 20px;
-}
- 
-.image-lightbox .close a {
-    height: auto; width: auto;
-    padding: 5px 10px;
-    color: #fff;
-    text-decoration: none;
-    background: #22272c;
-    box-shadow: inset 0px 24px 20px -15px rgba(255, 255, 255, 0.1), 
-        inset 0px 0px 10px rgba(0,0,0,0.4), 
-        0px 0px 30px rgba(255,255,255,0.4);
-    border-radius: 0px;
-    font-weight: bold;
-    float: right;
-}
- 
-.close a:hover {
-    box-shadow: inset 0px -24px 20px -15px rgba(255, 255, 255, 0.01), 
-        inset 0px 0px 10px rgba(0,0,0,0.4), 
-        0px 0px 20px rgba(255,255,255,0.4);
-}
-
-div[id^=image]:target {
-    width: 480px;
-    height: 800px;
-    z-index: 5000;
-    top: 100px;
-    left: 200px;
-}
-div[id^=image]:target .close {
-    display: block;
-}
- 
-div[id^=image]:target .expand {
-    display: none;
-}
-
-div[id^=himage]:target {
-    width: 450px;
-    height: 300px;
-    z-index: 5000;
-    top: 50px;
-    left: 200px;
-}
-div[id^=himage]:target .close {
-    display: block;
-}
- 
-div[id^=himage]:target .expand {
-    display: none;
-}
-
-/* Positionnement images projet */
-div#himage-1-1:target, div#himage-2-1:target { left: 200px; }
-
-div#himage-1-1 { left: 100px; }
-div#himage-2-1 { left: 450px; }
-
-/* Positionnement images portfolio */
-div#image-1-2:target, div#image-2-2:target, div#image-3-2:target { left: 200px; }
-div#image-4-2:target, div#image-5-2:target, div#image-6-2:target { left: 200px; }
-div#image-7-2:target, div#image-8-2:target, div#image-9-2:target { left: 200px; }
-div#image-10-2:target { left: 200px; }
-
-div#image-1-2 { left: 0; }
-div#image-2-2 { left: 290px; }
-div#image-3-2 { left: 580px; }
-div#image-4-2 { left: 0; top: 450px}
-div#image-5-2 { left: 290px; top: 450px;}
-div#image-6-2 { left: 580px; top: 450px;}
-div#image-7-2 { left: 0; top: 900px;}
-div#image-8-2 { left: 290px; top: 900px;}
-div#image-9-2 { left: 580px; top: 900px;}
-div#image-10-2 { left: 0px; top: 1350px;}
-
-
-
-/* Fin Gestion de la galerie photo */
