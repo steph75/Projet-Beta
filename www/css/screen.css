@@ -2,19 +2,20 @@
 
 /* Page */
 html {
-    background: url(../img/maxresdefault.jpg) no-repeat center top;
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
-    -ms-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover;
-    background-attachment:fixed;
+    background: white;
+//    background: url(../img/background.gif) no-repeat center top;
+//    -webkit-background-size: cover; 
+//    -moz-background-size: cover; 
+//    -ms-background-size: cover; 
+//    -o-background-size: cover; 
+//    background-size: cover;
+//    background-attachment:fixed;
     font-size: 100%; /* Voir -> Note 1 à la fin de la feuille de styles. */
 }
 body {
     margin: 0;
     padding: 10px 20px; /* Note -> 2 */
-    font-family: 'Arimo', sans-serif;
+    font-family: source-sans-pro, sans-serif;
     font-size: .8em; /* -> 4 */
     line-height: 1.25; /* -> 5 */
     color: black;
@@ -26,12 +27,11 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1em 0 .5em 0; /* -> 6 */
 }
 h1, h2 {
-    font-family: 'Arimo', sans-serif;
-    font-weight: normal; /* -> 7 */
+    font-family: source-sans-pro, sans-serif;
+    font-weight: bold; /* -> 7 */
 }
 h1 {
-    font-size: 3em; /* -> 8 */
-    font-style: italic;
+    font-size: 2.5em; /* -> 8 */
 }
 h2 {font-size: 1.8em;}
 h3 {font-size: 1.2em;}
@@ -71,6 +71,13 @@ a img {
     border: none; /* -> 10 */
 }
 
+.currentLink {
+   background-color: none;
+}
+.currentSelection {
+   background-color: none;   
+}
+
 /* Divers éléments de type en-ligne */
 em {
     font-style: italic;
@@ -91,9 +98,65 @@ strong {
 }
 #navigation a {
     color: #000000;
+    font-weight: bold;
 }
-#navigation a:hover, #navigation a:focus {
-    background: #F2F2F2;
+#navigation a:hover, a:focus {
+    color: darkgray;
+}
+#navigation a:active {
+    color: lightpink;
+}
+#navigation a.currentLink {
+    color: dimgray;
+}
+
+nav {
+    display: list-item;
+}
+
+nav ul
+{
+    padding: 20px 0px 0px 0px;
+    display: list-item;
+}
+ 
+#level1
+{
+    position: relative;
+}
+ 
+nav ul ul
+{
+    padding: 0px 0px 0px 0px;
+    display: none;
+}
+ 
+nav li
+{
+    display: list-item;
+}
+
+nav li.deroulant
+{
+    background: none;
+    position: inherit;
+}
+
+nav li.deroulant a
+{
+    display: none;
+}
+
+nav li:hover ul
+{
+    display: list-item;
+    font-size:0.8em;
+}
+
+nav ul ul.currentSelection
+{
+    display: list-item;
+    font-size:0.8em;
 }
 
 /* Contenu principal */
@@ -148,18 +211,19 @@ body {
 #navigation {
     width: 180px;
     float: left; /* -> 6 */
+    padding: 60px 0px 0px 10px;   
+    text-align: right;
 }
 #navigation ul {
     margin: 0;
-    padding: 20px 10px 20px 10px;
     list-style: none;
 }
 #navigation a {
-    display: block;
+    display: inline;
     height: 1%; /* -> 7 */
-    padding: 6px 10px 6px 10px;
-    line-height: 1.5;
-    font-size: .9em;
+    padding: 0px 0px 6px 10px;
+    line-height: 2;
+    font-size: 1em;
     text-decoration: none;
 }
 
@@ -172,27 +236,23 @@ body {
     margin-top: 10px;
 }
 #contenu p, #contenu li {
+    padding: 0px 0px 0px 0px;
     line-height: 1.5;
 }
 
+#textblock {
+    padding: 20px 40px 40px 40px;
+}
 /* Pied de page */
 #pied {
     padding: 15px 20px 10px 0;
     font-size: .85em;
 }
 
-/* Mention de copyright */
-#copyright {
-    margin: 8px 0 0 0;
-    font-size: 1em;
-    text-align: center;
-}
-
-#copyright a {
-    font-family: 'Arimo', sans-serif;
-    color: #000000;
-}
-
+figure {
+    display:inline-block;
+    padding:2em;
+}  
 
 hgroup {
     position: relative;
@@ -230,6 +290,6 @@ footer {
 }
 
 footer a {
-    font-family: 'Arimo', sans-serif;
+    font-family: source-sans-pro, sans-serif;
     color: #FFFFFF;
 }

@@ -4,8 +4,10 @@
 <meta charset="utf-8">
 <title>Projet Beta</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/screen.css" media="screen" title="no title">
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="//use.edgefonts.net/source-sans-pro.js"></script>
+<script src="js/getcurrentlink.js"></script>
 </head>
 <body>
     <div id="bloc_page">
@@ -13,20 +15,32 @@
 	</div>
 	<div id="centre">
             <div id="navigation">
-                <h3>Projet Beta</h3>
-                <a href="index.html">Accueil</a>
-                <a href="portfolio.html">Collection</a>
-                <a href="about.html">A propos</a>
-                <a href="contact.html">Contact</a>
+                <h1>APRÈS</h1>
+                <nav>
+                     <ul class="level1">
+                        <li class="deroulant">
+                            <a href="index.html">ACCUEIL</a>
+                        </li>
+                        <li class="deroulant">
+                            <a>COLLECTIONS</a>
+                            <ul class="level2">
+                                <li><a href="portfolio.html">Collection A</a></li>
+                            </ul>
+                        </li>
+                        <li class="deroulant">
+                            <a href="about.html">A PROPOS</a>
+                        </li>
+                        <li class="deroulant">
+                            <a href="contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
             <div id="contenu">
                 <img src="img/accueil.jpg">
             </div>
         </div>  
 	<div id="pied">
-	</div> 
-	<div id="copyright">
-            <h4>Copyright © 2015 Projet Beta</h4>
 	</div> 
     </div>
 </body>
